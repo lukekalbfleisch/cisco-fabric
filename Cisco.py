@@ -9,11 +9,11 @@ from fabric.contrib.console import confirm
 from getpass import getpass
 
 # Set up some variables to be used throught the run:
-env.user = "luke"  # This is the user we'll run as
+env.user = ""  # This is the user we'll run as, be sure to update it!
 # Lets get the password via manual entry instead of displaying it in
-# plain text in mercurial, eh?
-#env.password = getpass(yellow("Enter password for `%s` to continue: " % 
-#        env.user, bold=True))
+# plain text in mercurial/git, eh?
+env.password = getpass(yellow("Enter password for `%s` to continue: " % 
+        env.user, bold=True))
 # We define a role here, and add entries to it:
 env.roledefs = {
     'routers': ['192.168.110.1', '192.168.51.1', '192.168.51.2']
